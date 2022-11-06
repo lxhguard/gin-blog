@@ -1,11 +1,9 @@
 package main
 
 import (
-	"ginblog/config"
-    "fmt"
+	"ginblog/model"
 )
 
 func main() {
-	fmt.Println(config.AppMode)
-	fmt.Println(config.DbHost)
+	model.ConnectDb()
 }
