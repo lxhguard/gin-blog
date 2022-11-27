@@ -29,7 +29,7 @@ func ConnectDb() {
 	}
 
 	// [GORM 迁移数据表](https://gorm.io/zh_CN/docs/migration.html)
-	db.AutoMigrate(&User{})
+	db.AutoMigrate(&User{}, &Article{})
 
 	// [GORM 连接池教程](https://gorm.io/zh_CN/docs/connecting_to_the_database.html)
 	sqlDB, _ := db.DB()
